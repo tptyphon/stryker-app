@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/materialCardView2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:elevation="8dp"
+    android:layout_gravity="center"
+    android:backgroundTint="#eff4fa"
+    app:strokeWidth="1dp"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="-38dp"
+            android:layout_marginBottom="-38dp"
+            android:src="@drawable/radar"
+            android:rotation="-30"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+            app:tint="@color/blue7" />
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:src="@drawable/wifi_item"
+                        app:tint="@color/blue1" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/signal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-80dBm"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayout6"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:text="Wifi name"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toEndOf="@+id/linearLayout6"
+                            app:layout_constraintTop_toTopOf="@+id/linearLayout6" />
+
+                        <ImageView
+                            android:id="@+id/wps"
+                            android:layout_width="20dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="3dp"
+                            android:src="@drawable/wps"
+
+                            app:tint="@color/blue1"  />
+
+                        <ImageView
+                            android:id="@+id/key"
+                            android:layout_width="20dp"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:layout_marginStart="3dp"
+                            android:src="@drawable/passwd"
+                            app:tint="@color/blue1" />
+
+                        <ImageView
+                            android:id="@+id/lock"
+                            android:layout_width="20dp"
+                            android:layout_height="match_parent"
+                            android:padding="1dp"
+                            android:layout_marginStart="3dp"
+                            android:src="@drawable/wps_disabled"
+
+                            app:tint="@color/blue1" />
+
+                        <ImageView
+                            android:id="@+id/five"
+                            android:layout_width="20dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="3dp"
+                            android:src="@drawable/five"
+                            app:tint="@color/blue1" />
+                    </LinearLayout>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/bssid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:text="BSSID"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toEndOf="@+id/linearLayout6"
+                        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/channel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Channel: 1"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/linearLayout6"
+                        app:layout_constraintTop_toBottomOf="@+id/bssid" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/model"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+
+                            android:text="Model"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toEndOf="@+id/linearLayout6"
+                            app:layout_constraintTop_toBottomOf="@+id/channel" />
+                        <ImageView
+                            android:id="@+id/pixie"
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_gravity="top"
+                            android:layout_marginStart="3dp"
+                            android:src="@drawable/pixie_star"
+                            app:tint="@color/blue1" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/info"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/info"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/blue1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@+id/attack_layout"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/attack_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/pixie"
+                        app:tint="@color/blue1" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/attack_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pixie dust attack"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/listen_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/attack_interface"
+                 />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/attackInterface"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                app:checkedButton="@+id/wlan0"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                app:singleSelection="true"
+                android:layout_height="wrap_content">
+                <Button
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:id="@+id/wlan0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="wlan0"
+
+                    />
+                <Button
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:id="@+id/wlan1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="wlan1"
+                    />
+                <Button
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:id="@+id/wlan2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="wlan2"
+                    />
+                <Button
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:id="@+id/wlan3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="wlan3"
+                    />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+            </LinearLayout>
+        <LinearLayout
+            android:id="@+id/deauth_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Deauth interface:"
+                />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/deauthInterface"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                app:checkedButton="@+id/wlan12"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                app:singleSelection="true"
+                android:layout_height="wrap_content">
+                <Button
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:id="@+id/wlan02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="wlan0"
+
+                    />
+                <Button
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:id="@+id/wlan12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="wlan1"
+                    />
+                <Button
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:id="@+id/wlan22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="wlan2"
+                    />
+                <Button
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:id="@+id/wlan32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="wlan3"
+                    />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusTopStart="16dp"
+                android:hint="@string/your_pin">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pin_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/output_card"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#2B2B2B"
+                app:strokeWidth="0dp"
+                >
+
+                <TextView
+                    android:id="@+id/terminalView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:scrollbars="vertical"
+                    android:gravity="bottom"
+                    android:textIsSelectable="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/log"
+                android:visibility="gone"
+                android:text="@string/save_log"
+                app:icon="@drawable/save"
+                app:iconGravity="textEnd" />
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/start"
+                android:text="@string/start_attack"
+                app:icon="@drawable/start_attack"
+                app:iconGravity="textEnd" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

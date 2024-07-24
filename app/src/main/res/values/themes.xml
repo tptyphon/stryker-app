@@ -1,57 +1,55 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.Stryker" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/blue2</item>
-        <item name="colorPrimaryVariant">@color/blue2</item>
+<resources>
+
+    <style name="Stryker" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/blue1</item>
         <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="windowNoTitle">true</item>
-        <item name="colorSecondary">@color/blue2</item>
-        <item name="colorSecondaryVariant">@color/blue</item>
-        <item name="colorOnSecondary">@color/blue</item>
-        <item name="android:navigationBarColor">@color/white</item>
-        <!-- Status bar color. -->
-        <item name="android:textViewStyle">@style/MonsText</item>
-        <item name="android:buttonStyle">@style/MonsButton</item>
-        <item name="navigationViewStyle">@style/Widget.App.NavigationView</item>
-        <item name="android:statusBarColor" tools:targetApi="l">@color/nightwhite</item>
-        <!-- Customize your theme here. -->
-    </style>
-    <style name="MonsText" parent="android:TextAppearance.Material.Widget.TextView">
-        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="colorPrimaryContainer">@color/blue2</item>
+        <item name="colorOnPrimaryContainer">@color/blue3</item>
+        <item name="colorSecondary">@color/grey1</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/grey2</item>
+        <item name="colorOnSecondaryContainer">@color/grey3</item>
+        <item name="colorTertiary">@color/blue4</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorTertiaryContainer">@color/blue5</item>
+        <item name="colorOnTertiaryContainer">@color/blue6</item>
+        <item name="colorError">@color/red1</item>
+        <item name="colorErrorContainer">@color/white</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorOnErrorContainer">@color/red3</item>
+        <item name="android:colorBackground">@color/white2</item>
+        <item name="colorOnBackground">@color/grey4</item>
+        <item name="colorSurface">@color/white2</item>
+        <item name="colorOnSurface">@color/grey4</item>
+        <item name="colorSurfaceVariant">@color/grey6</item>
+        <item name="colorOnSurfaceVariant">@color/grey6</item>
+        <item name="colorOutline">@color/grey7</item>
+        <item name="colorOnSurfaceInverse">@color/grey8</item>
+        <item name="colorSurfaceInverse">@color/grey9</item>
+        <item name="colorPrimaryInverse">@color/blue7</item>
+        <item name="android:textColor">@color/grey4</item>
+        <item name="android:statusBarColor">#FFFFFF</item>
+        <item name="android:navigationBarColor">#FFFFFF</item>
+        <item name="colorSurfaceContainerHigh">#FFFFFF</item>
+
 
     </style>
 
-    <style name="MonsButton" parent="Widget.Material3.Button">
-        <item name="android:fontFamily">@font/google_sans</item>
-        <item name="android:textColor">@color/white</item>
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
     </style>
-    <style name="Theme.Stryker.NoActionBar">
+
+    <style name="Stryker.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.stryker.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Stryker.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="Theme.stryker.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-    <style name="Widget.App.NavigationView" parent="Widget.MaterialComponents.NavigationView">
-        <item name="materialThemeOverlay">@style/ThemeOverlay.App.NavigationView</item>
-        <item name="itemIconTint">@color/item_color</item>
-        <item name="itemTextColor">@color/item_color</item>
-        <item name="itemShapeFillColor">@color/selected</item>
-    </style>
-
-    <style name="ThemeOverlay.App.NavigationView" parent="">
-        <item name="colorPrimary">@color/purple_700</item>
-
-    </style>
-    <style name="AppBottomSheetDialogTheme" parent="Theme.MaterialComponents.DayNight.BottomSheetDialog">
-        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
-    </style>
-
-    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
-        <item name="android:background">@drawable/white_rectangle</item>
-    </style>
+    <style name="Stryker.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

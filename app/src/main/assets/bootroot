@@ -1,6 +1,6 @@
 #!/system/bin/sh
 
-## R1 by @ZALEXDEV
+## R5 by @ZALEXDEV
 ###
 FROM_ZALEXDEV_TO_WORLD=$(readlink -f $0)
 . ${FROM_ZALEXDEV_TO_WORLD%/*}/bootroot_env
@@ -35,8 +35,7 @@ f_isAllReady(){
     echo "[+] The Chroot has been started already." && return 0
 }
 
-######### MOUNT SDCARD #########
-
+######### MOUNT SDCARD/STRYKER #########
 f_mount_sdcard() {
     if [ -d "$MNT/sdcard" ]; then
         $BUSYBOX mountpoint -q "$MNT/sdcard" && return 0
@@ -44,14 +43,14 @@ f_mount_sdcard() {
     fi
     mkdir -p $MNT/sdcard
     for sdcard in \
-        "$EXTERNAL_STORAGE" \
-        /storage/emulated/0 \
-        /storage/emulated/legacy \
-        /storage/sdcard0 \
-        /sdcard
+        "$EXTERNAL_STORAGE/Stryker" \
+        /storage/emulated/0/Stryker \
+        /storage/emulated/legacy/Stryker \
+        /storage/sdcard0/Stryker \
+        /sdcard/Stryker
     do
         [ -d "$sdcard" ] &&
-            $BUSYBOX mount -o bind "$sdcard" "$MNT/sdcard" && echo "[+] mounted /sdcard" &&
+            $BUSYBOX mount -o bind "$sdcard" "$MNT/sdcard" && echo "[+] mounted /sdcard/Stryker to /sdcard" &&
                 return 0
     done
     return 1
@@ -138,9 +137,10 @@ f_mount_fs() {
 
     ######### SET NETWORK AND HOSTNAME ########
     $BUSYBOX sysctl -w net.ipv4.ip_forward=1
-    echo "127.0.0.1		 localhost stryker"                                       > $MNT/etc/hosts
-    echo "::1				 localhost ip6-localhost ip6-loopback" >> $MNT/etc/hosts
-    echo "stryker"                                                                            > $MNT/proc/sys/kernel/hostname
+    echo "127.0.0.1    localhost stryker"              > $MNT/etc/hosts
+    echo "::1    localhost ip6-localhost ip6-loopback" >> $MNT/etc/hosts
+    echo 'nameserver 8.8.8.8'                          > /data/local/stryker/release/etc/resolv.conf
+    echo 'nameserver 8.8.4.4'                          >> /data/local/stryker/release/etc/resolv.conf
 
     ######### Setup done #########
     echo "[+] The Chroot has been started."

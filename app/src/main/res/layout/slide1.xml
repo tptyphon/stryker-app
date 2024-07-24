@@ -1,51 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:gravity="center"
-    android:background="#3F51B5"
-    android:layout_height="match_parent">
-    <ImageView
-        android:id="@+id/slide_img"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/bolt"
-        android:tint="@color/white"
-        android:padding="30dp"
-        android:background="@drawable/circle"
-        android:backgroundTint="#2196F3"
-        android:layout_gravity="center_horizontal"
-        />
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/slide_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:textSize="35dp"
-        android:text="@string/hi"
-        android:textColor="@color/white"
-        android:gravity="center"/>
+    android:orientation="vertical"
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/slide_description"
+    android:layout_height="match_parent">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginTop="10dp"
-        android:padding="10dp"
-        android:text="@string/thanks"
-        android:textAlignment="textStart"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:typeface="normal" />
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/slide_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/go"
-        app:icon="@drawable/bolt"
-        android:backgroundTint="#2196F3"
-        app:cornerRadius="8dp"/>
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_marginTop="-80dp"
+            android:layout_gravity="center"
+            app:lottie_autoPlay="true"
+            app:lottie_speed="2"
+            app:lottie_rawRes="@raw/hello"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:gravity="center"
+
+            android:text="Welcome to Stryker!"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+
+            android:text="Stryker - is a new generation of mobile pentest app! Check your devices and networks with a click!"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/slide_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:useMaterialThemeColors="true" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+
+                android:text="I agree with with Privacy Policy" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/slide_checkbox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:useMaterialThemeColors="true" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+
+
+                android:text="I agree with with Terms And Conditions" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/slide_checkbox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:useMaterialThemeColors="true" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+
+                android:text="I agree to follow the Ethical Hacking Standards" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:enabled="false"
+
+            android:text="Let's start!"
+            app:cornerRadius="15dp"
+       />
+    </LinearLayout>
 </LinearLayout>

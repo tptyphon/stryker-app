@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/materialCardView2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:elevation="8dp"
+    android:layout_gravity="center"
+    android:backgroundTint="#eff4fa"
+    app:strokeWidth="1dp"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="-38dp"
+            android:layout_marginBottom="-38dp"
+            android:src="@drawable/radar"
+            android:rotation="-30"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+            app:tint="@color/blue7" />
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:src="@drawable/wifi_item"
+                        app:tint="@color/blue1" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-80dBm"
+                        android:id="@+id/signal"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayout6"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:text="Wifi name"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toEndOf="@+id/linearLayout6"
+                            app:layout_constraintTop_toTopOf="@+id/linearLayout6" />
+
+                        <ImageView
+                            android:id="@+id/wps"
+                            android:layout_width="20dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="3dp"
+                            android:src="@drawable/wps"
+
+                            app:tint="@color/blue1"  />
+
+                        <ImageView
+                            android:id="@+id/lock"
+                            android:layout_width="20dp"
+                            android:layout_height="match_parent"
+                            android:padding="1dp"
+                            android:layout_marginStart="3dp"
+                            android:src="@drawable/wps_disabled"
+
+                            app:tint="@color/blue1" />
+
+                        <ImageView
+                            android:id="@+id/five"
+                            android:layout_width="20dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="3dp"
+                            android:src="@drawable/five"
+                            app:tint="@color/blue1" />
+
+                        <ImageView
+                            android:id="@+id/key"
+                            android:layout_width="20dp"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:layout_marginStart="3dp"
+                            android:src="@drawable/passwd"
+                            app:tint="@color/blue1" />
+                    </LinearLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/bssid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:text="BSSID"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toEndOf="@+id/linearLayout6"
+                        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/channel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Channel"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/linearLayout6"
+                        app:layout_constraintTop_toBottomOf="@+id/bssid" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/model"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+
+                        android:text="Model"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/linearLayout6"
+                        app:layout_constraintTop_toBottomOf="@+id/channel" />
+                    <ImageView
+                        android:id="@+id/pixie"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+
+                        android:layout_marginStart="3dp"
+                        android:src="@drawable/pixie_star"
+                        app:tint="@color/blue1" />
+                </LinearLayout>
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/info"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/info"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/blue1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+<LinearLayout
+    android:id="@+id/attacks_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@+id/pixie_dust"
+                android:padding="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/pixie"
+                    app:tint="@color/blue1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/scanners_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pixie_dust_attack"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/common_pins"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/common_pins"
+                    app:tint="@color/blue1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/local_scanners_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/common_pins_attack"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pin_brute"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/pin_brute"
+                    app:tint="@color/blue1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/web_scanners_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pin_brute_force_attack"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/own_pin"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/own_pin"
+                    app:tint="@color/blue1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/router_scanners_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/own_pin_attack"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/passwd_brute"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/passwd_brute"
+                    app:tint="@color/blue1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/passwd_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/password_brute_attack"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/hs_capture"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/hs_capture"
+                    app:tint="@color/blue1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/nmap_scanners_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/handshake_capture_attack"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/deauth"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/deauth"
+                    app:tint="@color/blue1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/deauth_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/devices_deauth_attack"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
