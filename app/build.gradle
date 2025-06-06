@@ -63,7 +63,7 @@ dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-core:2.16.0'
     implementation 'com.github.smart-fun:XmlToJson:1.5.3'
     implementation "com.ncorti:slidetoact:0.11.0"
-    implementation 'com.race604.waveloading:library:1.1.1'
+    implementation 'com.github.race604:waveloading:1.1.0'
     implementation "ch.acra:acra-http:$acraVersion"
     implementation "ch.acra:acra-toast:$acraVersion"
     implementation "ch.acra:acra-advanced-scheduler:$acraVersion"

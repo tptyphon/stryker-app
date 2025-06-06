@@ -23,7 +23,7 @@ public class StrykerApplication extends Application {
                         .withText(getString(R.string.crash))
                         .build(),
                         new HttpSenderConfigurationBuilder()
-                                .withUri("https://collector.tracepot.com/YOUR COLLECTOR")
+                                .withUri("https://collector.tracepot.com/FyfIQpcBA-FIlZ2C4APg")
                                 .build()
                 )
             );
